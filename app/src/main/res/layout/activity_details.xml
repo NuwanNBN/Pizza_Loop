@@ -1,9 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="40dp"
+    android:background="@color/colorPrimaryDark"
     tools:context=".DetailsActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_margin="1dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_shopping_cart"
+                style="@style/button_style"
+                android:layout_gravity="right"
+                android:onClick="cart"/>
+
+            <TextView
+                android:id="@+id/textname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:textSize="30dp"
+                android:typeface="sans"
+                android:gravity="center"
+                app:fontFamily="sans-serif-black" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="20dp"/>
+
+            <TextView
+                android:id="@+id/textprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="30dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/textdescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="1dp"
+                android:textSize="20dp"
+                android:typeface="sans"
+                app:fontFamily="sans-serif" />
+
+            <Button
+                android:id="@+id/shopping_btn"
+                style="@style/button_style"
+                android:text="Buy!"
+                android:onClick="shopping"
+                android:textSize="20sp"
+                android:shape="rectangle"
+                android:typeface="serif"
+                android:background="@drawable/ic_buttoncart"
+                android:drawableLeft="@drawable/ic_shopping_cart"
+                android:paddingLeft="20dp"
+                android:drawablePadding="10dp"
+                android:layout_gravity="right"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
+

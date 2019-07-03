@@ -4,7 +4,7 @@ xmlns:tools="http://schemas.android.com/tools"
 android:id="@+id/activity_main"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-android:paddingBottom="60dp"
+android:paddingBottom="70dp"
 android:paddingLeft="40dp"
 android:paddingRight="40dp"
 android:paddingTop="60dp"
@@ -21,7 +21,9 @@ tools:context="com.example.pizza_loop.MainActivity">
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="10dp">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -29,45 +31,56 @@ tools:context="com.example.pizza_loop.MainActivity">
             android:layout_margin="30dp"
             android:layout_height="10dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/login" />
+            app:srcCompat="@drawable/login"/>
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
             android:layout_marginBottom="50dp"
             android:text="NBN Pizza Hut"
+            android:gravity="center"
             android:textSize="30dp"
             android:typeface="sans"
             app:fontFamily="sans-serif-black" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/username"
+            android:shape="rectangle"
             style="@style/editText_style"
-            android:hint="E-Mail here!"
-            android:inputType="textEmailAddress" />
+            android:hint="User Name !"
+            android:inputType="text" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/password"
             style="@style/editText_style"
+            android:shape="rectangle"
             android:hint="Password"
             android:inputType="textPassword" />
 
         <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
             android:id="@+id/button"
-            style="@style/button_style"
             android:text="Log In"
             android:onClick="login"
             android:textSize="20sp"
-            android:typeface="serif" />
+            android:shape="rectangle"
+            android:typeface="serif"
+            android:background="@drawable/ic_buttonlogin"/>
 
         <TextView
             android:id="@+id/textView2"
             android:layout_marginLeft="45dp"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Forget Your Password?" />
+            android:shape="rectangle"
+            android:text="Forget Your Password?"
+            android:gravity="right"/>
     </LinearLayout>
 </RelativeLayout>
 
